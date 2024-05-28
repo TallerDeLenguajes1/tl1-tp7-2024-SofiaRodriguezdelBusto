@@ -3,8 +3,9 @@ namespace administracion
     enum Cargos
     {
         Auxiliar,
-        Administrivo,
+        Administrativo,
         Ingeniero,
-        Especialista
+        Especialista,
+        Investigador
     }
 }
