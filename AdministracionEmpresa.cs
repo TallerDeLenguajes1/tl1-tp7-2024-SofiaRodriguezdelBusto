@@ -24,27 +24,6 @@ namespace administracion
 
         public Cargos Cargo { get => cargo; set => cargo = value; }
 
-        public void MostrarEmpleado(double sueldoReal, int antiguedad, int edad, int aniosParaJubilacion)
-        {
-            Console.WriteLine($"\nNombre: {Nombre}");
-            Console.WriteLine($"\nApellido: {Apellido}");
-            Console.WriteLine($"\nFecha de Nacimiento: {FechaNacimiento.ToShortDateString()}");
-            Console.WriteLine($"Edad: {edad}");
-            Console.Write("Estado civil: ");
-            if (EstadoCivil == 'c' || EstadoCivil == 'C')
-            {
-                Console.Write("Casado\n");
-            } else
-            {
-                Console.Write("Soltero\n");
-            }
-            Console.WriteLine($"\nFecha de ingreso a la empresa {FechaIngreso.ToShortDateString()}");
-            Console.WriteLine($"\nAntiguedad {antiguedad}");
-            Console.WriteLine($"\nAnios restantes para jubilarse {aniosParaJubilacion}");
-            Console.WriteLine($"\nSueldo basico $ {SueldoBasico}");
-            Console.WriteLine($"\nSueldo Real $ {sueldoReal}");
-            Console.WriteLine($"\nCargo {Cargo}");1
-        }
         public int CalculoAntiguedad()
         {
             DateTime fechaActual = DateTime.Now;

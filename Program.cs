@@ -168,6 +168,24 @@ double sueldoReal = empleados[empleadoAJubilar].CalculoSalario();
 int antiguedad = empleados[empleadoAJubilar].CalculoAntiguedad();
 int edad = empleados[empleadoAJubilar].CalculoEdad();
 
-Console.WriteLine("\nEl empleado mas proximo a jubilarse es: ");
-empleados[empleadoAJubilar].MostrarEmpleado(sueldoReal, antiguedad, edad, menorCantidadAnios);
+Console.WriteLine("\nLos datos del empleado mas proximo a jubilarse son: ");
+
+Console.WriteLine($"\nNombre: {empleados[empleadoAJubilar].Nombre}");
+Console.WriteLine($"\nApellido: {empleados[empleadoAJubilar].Apellido}");
+Console.WriteLine($"\nFecha de Nacimiento: {empleados[empleadoAJubilar].FechaNacimiento.ToShortDateString()}");
+Console.WriteLine($"Edad: {edad}");
+Console.Write("Estado civil: ");
+if (empleados[empleadoAJubilar].EstadoCivil == 'c' || empleados[empleadoAJubilar].EstadoCivil == 'C')
+{
+    Console.Write("Casado\n");
+} else
+{
+    Console.Write("Soltero\n");
+}
+Console.WriteLine($"\nFecha de ingreso a la empresa {empleados[empleadoAJubilar].FechaIngreso.ToShortDateString()}");
+Console.WriteLine($"\nAntiguedad {antiguedad}");
+Console.WriteLine($"\nAnios restantes para jubilarse {menorCantidadAnios}");
+Console.WriteLine($"\nSueldo basico $ {empleados[empleadoAJubilar].SueldoBasico}");
+Console.WriteLine($"\nSueldo Real $ {sueldoReal}");
+Console.WriteLine($"\nCargo {empleados[empleadoAJubilar].Cargo}");
 
