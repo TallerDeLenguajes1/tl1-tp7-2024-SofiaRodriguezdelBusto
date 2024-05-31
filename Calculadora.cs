@@ -20,7 +20,7 @@ namespace EspacioCalculadora
         {
             if(termino != 0)
             {
-                dato *= termino;
+                dato /= termino;
             }else
             {
                 Console.WriteLine("Error! Division en 0");
